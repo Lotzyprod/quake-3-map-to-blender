@@ -11,7 +11,7 @@ Features:
 (all edits can be patched back into the BSP)
 
 - Import MD3 files
-- Export MD3 files with custom normals (e.g. for smooth shading. see attached video and more about MD3 models)
+- Export MD3 files with custom normals
 
 How to install:
 

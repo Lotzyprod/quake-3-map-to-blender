@@ -27,6 +27,8 @@ import mathutils
 
 #prevents overwriting of old images
 def create_new_image(name, width, height, float_buffer=False):
+    width = int(width)
+    height = int(height)
     old_image = bpy.data.images.get(name)
     if old_image != None:
         old_image.name = name + "_previous.000"
@@ -149,8 +151,8 @@ def pack_lightmaps(bsp, import_settings):
             import_settings.log.append("found best packed lightmap size: " + str(import_settings.packed_lightmap_size))
             break
         
-    bpy.context.scene.id_tech_3_lightmaps_per_row = num_rows
-    bpy.context.scene.id_tech_3_lightmaps_per_column = num_columns
+    bpy.context.scene.id_tech_3_lightmaps_per_row = int(num_rows)
+    bpy.context.scene.id_tech_3_lightmaps_per_column = int(num_columns)
         
     if force_vertex_lighting == True:
         return
